@@ -33,6 +33,7 @@ export class ChartsComponent {
           text: "KPI INDEX"
         },
           axisY: {
+            title: "ALl KPIs",
             includeZero: true
           },
         data: [{
@@ -40,6 +41,9 @@ export class ChartsComponent {
           indexLabelFontColor: "#5A5757",
               indexLabelFontSize: 16,
           indexLabelPlacement: "outside",
+          name: "AttendaceScore",
+          toolTipContent:"{y} {name}",
+        
           dataPoints: [
             { x: 1, y: this.charts[0].attendance_score},
             { x: 2, y: this.charts[1].attendance_score },
@@ -55,10 +59,13 @@ export class ChartsComponent {
         {
           type: "line",
           indexLabelFontColor: "#5A5757",
-              indexLabelFontSize: 16,
+          indexLabelFontSize: 16,
           indexLabelPlacement: "outside",
+          name: "ProductivityScore",
+          toolTipContent:"{y} {name}",
+         
           dataPoints: [
-            { x: 1, y: this.charts[0].productivity_score},
+            { x: 1 ,y: this.charts[0].productivity_score,},
             { x: 2, y: this.charts[1].productivity_score },
             { x: 3, y: this.charts[2].productivity_score },
             { x: 4, y: this.charts[3].productivity_score },
@@ -74,23 +81,8 @@ export class ChartsComponent {
           indexLabelFontColor: "#5A5757",
               indexLabelFontSize: 16,
           indexLabelPlacement: "outside",
-          dataPoints: [
-            { x: 1, y: this.charts[0].productivity_score},
-            { x: 2, y: this.charts[1].productivity_score },
-            { x: 3, y: this.charts[2].productivity_score },
-            { x: 4, y: this.charts[3].productivity_score },
-            { x: 5, y: this.charts[4].productivity_score},
-            { x: 6, y: this.charts[5].productivity_score},
-            { x: 7, y: this.charts[6].productivity_score },
-            { x: 8, y: this.charts[7].productivity_score},
-                 
-          ]
-        },
-        {
-          type: "line",
-          indexLabelFontColor: "#5A5757",
-              indexLabelFontSize: 16,
-          indexLabelPlacement: "outside",
+          name: "QualityofWorkScore",
+          toolTipContent:"{y} {name}",
           dataPoints: [
             { x: 1, y: this.charts[0].quality_of_work_score},
             { x: 2, y: this.charts[1].quality_of_work_score },
@@ -108,8 +100,6 @@ export class ChartsComponent {
       chart.render();
     })
   }
-
-    
 
   
   ngOnInit(): void {
