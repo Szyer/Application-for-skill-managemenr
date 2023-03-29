@@ -7,6 +7,7 @@ import { CertificationComponent } from './certification/certification.component'
 import { HomeComponent } from './home/home.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { WorkingdaysComponent } from './workingdays/workingdays.component';
+import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'skills', component:SkillsComponent},
   {path:'certificate', component:CertificationComponent},
   {path:'experience', component:ExperienceComponent},
-  {path:'workingdays', component:WorkingdaysComponent}
+  {path:'workingdays', component:WorkingdaysComponent},
+  {path:'chart', component:ChartsComponent}
 ];
 
 @NgModule({

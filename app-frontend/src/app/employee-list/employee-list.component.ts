@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
 import { MatTableDataSource } from '@angular/material/table';
@@ -10,6 +10,7 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent {
+  @Output() onDataReady = new EventEmitter<any>();
   searchJobTitle: string = '';
   selectedJobTitle: string = '';
   employees: Employee[] = [];
@@ -25,7 +26,6 @@ export class EmployeeListComponent {
     'attendance_score',
   ];
   
-
   constructor(private employeeService: EmployeeService) { }
   dataSource!: MatTableDataSource<Employee>;
   @ViewChild(MatSort) sort!: MatSort;

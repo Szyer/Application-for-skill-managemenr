@@ -15,7 +15,9 @@ import { HomeComponent } from './home/home.component';
 import { EmployeeService } from './employee-list/employee.service';
 import { WorkingdaysComponent } from './workingdays/workingdays.component';
 import { FormsModule } from '@angular/forms';
-
+import { ChartsComponent } from './charts/charts.component';
+import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component'
+var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 @NgModule({
   declarations: [
    
@@ -26,8 +28,10 @@ import { FormsModule } from '@angular/forms';
     ExperienceComponent,
     HomeComponent,
     WorkingdaysComponent,
+    ChartsComponent,
+    CanvasJSChart,   
     AppComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     FormsModule,
